@@ -1,21 +1,22 @@
 public class PolygonTester {
     public static void main(String[] args) {
 
-                System.out.println("\nThis is the output with 5 sides, side length of 6.865, and a name of pentagon");
-                Polygon poly1 = new Polygon(5,6.865,"pentagon");
-                System.out.println(poly1);
+        System.out.println("This is the output of a default polygon");
+        Polygon defaultPolygon = new Polygon();
+        System.out.println(defaultPolygon);
 
-                System.out.println("\nThis is the output using the default constructor.");
-                Polygon poly2 = new Polygon();
-                System.out.println(poly2);
+        System.out.println("This is a polygon output with 8 sides, side length 9.832, and name octagon.");
+        Polygon polygon1 = new Polygon(8, 9.832, "octagon");
+        System.out.println(polygon1);
 
-                System.out.println("\nThis is an example output for an invalid polygon.");
-                Polygon poly3 = new Polygon(1,785,"line");
-                System.out.println(poly3);
+        System.out.println("This is an invalid polygon");
+        Polygon invalidPoly = new Polygon(2, 1.0, "angle");
+        System.out.println(invalidPoly);
 
-                System.out.println("invalid");
-                Polygon poly4 = new Polygon(1,2.8, "shape");
-                System.out.println(poly4);
+        System.out.println("This is an invalid polygon mutated to become valid");
+        Polygon polygonChanged = new Polygon(1, 3.893, "line");
+        polygonChanged.setNumSides(5);
+        polygonChanged.setName("pentagon");
             }
         }
 

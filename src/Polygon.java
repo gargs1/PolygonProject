@@ -113,7 +113,8 @@ import java.lang.Math;
         }
 
         public double calculateArea() {
-          double apothem = sideLength/(2 * Math.tan(180/numSides));
+          double rad = Math.toRadians(180/numSides);
+          double apothem = sideLength /(2 * (Math.tan(rad)));
           Area = .5 * apothem * Perimeter;
           return Area;
         }
@@ -122,9 +123,9 @@ import java.lang.Math;
           String retMessage = "";
           if (numSides > 2 && sideLength > 0.0) {
             DecimalFormat threeDec = new DecimalFormat("#.###");
-            retMessage = "The shape you made is a " + typeShape + " which has " + numSides + " sides." + "\n" +
+            retMessage = "Your shape is a " + typeShape + " which has " + numSides + " sides." + "\n" +
               "The length of each side is " + threeDec.format(sideLength) + "." + "\n" + "The total perimeter of " +
-              " your " + typeShape + " is " + threeDec.format(calculatePerimeter()) + " units. \n" + " The total area of " +
+              " your " + typeShape + " is " + threeDec.format(calculatePerimeter()) + " units. \n" + "The total area of " +
               " your " + typeShape + " is " + threeDec.format(calculateArea()) + " units squared.";
           }
           return retMessage;
