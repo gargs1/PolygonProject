@@ -4,7 +4,7 @@ import java.lang.Math;
 /**
  * @author Suhaani Garg
  * @file Polygon
- * @date 2/6/23
+ * @date 2/12/23
  *
  * Creates a polygon with equal side lengths.
  * The user can also determine the perimeter of the polygon and
