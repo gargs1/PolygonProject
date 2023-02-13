@@ -69,6 +69,7 @@ import java.lang.Math;
         public int getNumSides() {
           return numSides;
         }
+
         /**
          *
          * @return the length of each side of the polygon
@@ -161,6 +162,7 @@ import java.lang.Math;
          *
          * @return the calculated area of a polygon
          */
+
         public double calculateArea()
         {
           calculatePerimeter();
