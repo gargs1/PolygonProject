@@ -24,6 +24,7 @@ import java.lang.Math;
          * Makes a default polygon, specifically a triangle with 3 sides and side lengths of 1.0.
          *
          */
+
         public Polygon() {
           numSides = 3;
           sideLength = 1.0;
@@ -41,6 +42,7 @@ import java.lang.Math;
          * @param length side length of the polygon
          * @param shape name of the shape of polygon
          */
+
         public Polygon(int sides, double length, String shape)
         {
           numSides = 3;
@@ -63,6 +65,7 @@ import java.lang.Math;
          *
          * @return the number of sides of the polygon
          */
+
         public int getNumSides() {
           return numSides;
         }
@@ -70,6 +73,7 @@ import java.lang.Math;
          *
          * @return the length of each side of the polygon
          */
+
         public double getSideLength() {
           return sideLength;
         }
@@ -78,6 +82,7 @@ import java.lang.Math;
          *
          * @return the type of shape the polygon is
          */
+
         public String getShapeType() {
           return typeShape;
         }
@@ -86,6 +91,7 @@ import java.lang.Math;
          *
          * @return the perimeter of the polygon
          */
+
         public double getPerimeter() {
           return perimeter;
         }
@@ -94,6 +100,7 @@ import java.lang.Math;
          *
          * @return the area of the polygon
          */
+
         public double getArea() {
           getSideLength();
           getNumSides();
@@ -133,10 +140,16 @@ import java.lang.Math;
          *
          * @param shape
          */
+
         public void setShapeName(String shape)
         {
           this.typeShape = shape;
         }
+
+        /**
+         *
+         * @return the calculated perimeter of the polygon
+         */
 
         public double calculatePerimeter()
         {
@@ -144,7 +157,12 @@ import java.lang.Math;
           return perimeter;
         }
 
-        public double calculateArea() {
+        /**
+         *
+         * @return the calculated area of a polygon
+         */
+        public double calculateArea()
+        {
           calculatePerimeter();
           getPerimeter();
           double rad = Math.toRadians(180/numSides);
@@ -154,7 +172,13 @@ import java.lang.Math;
           return area;
         }
 
-        public String toString() {
+        /**
+         *
+         * @description Prints the shape, number of sides, length of each side,
+         * and both the area and perimeter to three decimal places
+         */
+
+          public String toString() {
           String retMessage = "";
           if (numSides > 2 && sideLength > 0.0) {
             DecimalFormat threeDec = new DecimalFormat("#.###");
